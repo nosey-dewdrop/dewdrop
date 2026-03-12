@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+<header class="topnav">
+  <a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a>
+  <nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav>
+  <div class="nav-right">
+    <div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div>
+    <button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+    <a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a>
+    <a href="create.html" class="nav-create">✦ Create</a>
+    <a href="profile.html" class="nav-avatar">DS</a>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Poster -->
+  <div class="event-poster poster-music" style="animation:fadeUp .4s ease both">
+    🎵
+    <span class="card-badge">Music</span>
+    <span class="card-ai-badge">✨ AI Poster</span>
+  </div>
+
+  <div class="event-content">
+    <div class="event-meta-date">Sat Mar 15 · 8:00 PM</div>
+    <h1 class="event-title">Rooftop Jazz Night</h1>
+    <div class="event-location">📍 Ankara, Çankaya</div>
+
+    <p class="event-description">
+      An evening of smooth jazz under the stars. Featuring local artists and guest performers from Istanbul.
+      Drinks and small bites available. Bring your friends — the rooftop has room for everyone. 
+      This is a free event, no tickets needed. Just RSVP and show up!
+    </p>
+
+    <!-- Creator -->
+    <a href="profile.html" class="event-creator">
+      <div class="event-creator-avatar">DS</div>
+      <div>
+        <div style="font-size:.88rem;font-weight:500;color:var(--tx)">damla</div>
+        <div style="font-size:.72rem;color:var(--tx3)">Organizer · Storm Chaser</div>
+      </div>
+    </a>
+
+    <!-- Actions -->
+    <div class="event-actions">
+      <button class="btn-rsvp" style="padding:12px 28px;font-size:.88rem">RSVP — I'm Going</button>
+      <button class="btn-outline">Share</button>
+    </div>
+
+    <!-- Attendees -->
+    <div style="font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);margin-bottom:12px">12 people going</div>
+    <div class="attendee-chips">
+      <a href="profile.html?u=ali" class="attendee-chip"><div class="chip-avatar av-1">AK</div><span class="chip-name">ali.dev</span></a>
+      <a href="profile.html?u=elif" class="attendee-chip"><div class="chip-avatar av-2">ES</div><span class="chip-name">elif_s</span></a>
+      <a href="profile.html?u=mert" class="attendee-chip"><div class="chip-avatar av-3">MB</div><span class="chip-name">mert_b</span></a>
+      <a href="profile.html?u=selin" class="attendee-chip"><div class="chip-avatar av-4">SK</div><span class="chip-name">selin.k</span></a>
+      <a href="profile.html?u=can" class="attendee-chip"><div class="chip-avatar av-2">CY</div><span class="chip-name">can.yilmaz</span></a>
+      <a href="profile.html?u=tk" class="attendee-chip"><div class="chip-avatar av-1">TK</div><span class="chip-name">tuna.k</span></a>
+    </div>
+
+    <!-- Comments -->
+    <div class="section-header"><h2 class="section-title"><span class="section-num">💬</span> Comments</h2></div>
+    <div class="comment-box">
+      <div class="comment-header">
+        <div class="comment-avatar av-2">AK</div>
+        <span class="comment-author">ali.dev</span>
+        <span class="comment-time">· 2h ago</span>
+      </div>
+      <div class="comment-text">This is going to be amazing! Can't wait for the rooftop vibes.</div>
+    </div>
+    <div class="comment-box">
+      <div class="comment-header">
+        <div class="comment-avatar av-3">MB</div>
+        <span class="comment-author">mert_b</span>
+        <span class="comment-time">· 5h ago</span>
+      </div>
+      <div class="comment-text">Anyone coming from Bilkent? We can share a cab 🚕</div>
+    </div>
+
+    <!-- Comment input -->
+    <div style="display:flex;gap:10px;margin-bottom:36px">
+      <input class="form-input" placeholder="Write a comment…" style="border-radius:var(--rpill)">
+      <button class="btn-primary" style="padding:10px 20px;border-radius:var(--rpill)">Send</button>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body>
+</html>

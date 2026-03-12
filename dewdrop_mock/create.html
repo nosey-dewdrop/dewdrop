@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · create event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">create</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(30px,4vw,44px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Create an <em style="font-style:italic;color:var(--accent)">event.</em></h1>
+    <p style="font-size:.92rem;color:var(--tx2)">Fill in the details and let people discover it.</p>
+  </div>
+
+  <div style="max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--r4);padding:32px;box-shadow:var(--sh2);animation:fadeUp .4s ease both;animation-delay:.08s">
+
+    <div class="form-group">
+      <label class="form-label">Event Title</label>
+      <input class="form-input" placeholder="e.g. Rooftop Jazz Night">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Description</label>
+      <textarea class="form-textarea" placeholder="Tell people what this event is about…"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Category</label>
+      <select class="form-select">
+        <option>Select category…</option>
+        <option>🎵 Music</option><option>🏀 Sports</option><option>📚 Study</option>
+        <option>🎨 Arts</option><option>🍕 Food</option><option>💻 Tech</option><option>🌿 Outdoor</option><option>👥 Social</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Date</label>
+        <input class="form-input" type="date">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Start Time</label>
+        <input class="form-input" type="time">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Location</label>
+      <input class="form-input" placeholder="e.g. Bilkent, EE Building">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Capacity</label>
+        <input class="form-input" type="number" placeholder="Leave empty for unlimited">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Price (₺)</label>
+        <input class="form-input" type="number" placeholder="0 = Free">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Visibility</label>
+      <select class="form-select">
+        <option>🌍 Public — everyone can see</option>
+        <option>👥 Friends only</option>
+        <option>🔒 Private — invite only</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Poster</label>
+      <div style="border:2px dashed var(--border);border-radius:var(--r3);padding:40px;text-align:center;color:var(--tx3);font-size:.84rem;cursor:pointer;transition:all var(--ease)" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+        📸 Click to upload or drag & drop<br>
+        <span style="font-size:.72rem">or</span><br>
+        <button class="btn-primary" style="margin-top:10px;font-size:.78rem;padding:8px 16px">✨ Generate AI Poster</button>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:28px">
+      <a href="index.html" class="btn-outline">Cancel</a>
+      <button class="btn-primary" style="padding:12px 32px">Create Event →</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

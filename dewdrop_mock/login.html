@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+<!-- No navbar on login -->
+
+<div class="page">
+  <div class="login-container" style="animation:fadeUp .4s ease both">
+
+    <div style="font-size:48px;margin-bottom:16px">💧</div>
+    <div class="login-brand">dewdrop<em>.</em></div>
+    <div class="login-sub">Discover events. Meet people. Make waves.</div>
+
+    <div class="login-card">
+
+      <!-- Step 1: Phone -->
+      <div id="step-phone">
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input class="form-input" type="tel" placeholder="+90 5XX XXX XX XX" id="phone-input">
+        </div>
+        <button class="btn-primary" style="width:100%;padding:12px" onclick="showOtp()">Send Code →</button>
+      </div>
+
+      <!-- Step 2: OTP (hidden) -->
+      <div id="step-otp" style="display:none">
+        <div style="font-size:.84rem;color:var(--tx2);margin-bottom:16px;text-align:center">
+          We sent a code to <strong id="phone-display">+90 5XX</strong>
+        </div>
+        <div class="form-group">
+          <label class="form-label">6-Digit Code</label>
+          <input class="form-input" type="text" placeholder="000000" maxlength="6" style="text-align:center;font-size:1.4rem;letter-spacing:.5em;font-family:monospace">
+        </div>
+        <a href="index.html" class="btn-primary" style="width:100%;padding:12px;display:block;text-align:center">Verify & Enter →</a>
+        <div style="text-align:center;margin-top:12px">
+          <button onclick="showPhone()" style="background:none;border:none;font-size:.78rem;color:var(--accent);font-weight:500">← Change number</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:24px;font-size:.72rem;color:var(--tx3);text-align:center">
+      By continuing, you agree to dewdrop's Terms and Privacy Policy.
+    </div>
+
+    <div style="margin-top:40px;text-align:center">
+      <button class="nav-theme" id="theme-btn" onclick="toggleTheme()" style="font-size:.78rem">🌙 Dark</button>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+
+<script>
+function showOtp() {
+  var phone = document.getElementById('phone-input').value || '+90 5XX XXX XX XX';
+  document.getElementById('phone-display').textContent = phone;
+  document.getElementById('step-phone').style.display = 'none';
+  document.getElementById('step-otp').style.display = '';
+}
+function showPhone() {
+  document.getElementById('step-phone').style.display = '';
+  document.getElementById('step-otp').style.display = 'none';
+}
+</script>
+<script src="js/interactions.js"></script>
+</body></html>

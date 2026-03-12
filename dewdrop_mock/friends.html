@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · friends</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html" class="on">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">friends</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Your <em style="font-style:italic;color:var(--accent)">people.</em></h1>
+  </div>
+
+  <div class="tabs"><button class="tab on" data-tab="following">Following · 89</button><button class="tab" data-tab="followers">Followers · 156</button><button class="tab" data-tab="suggested">Suggested</button></div>
+
+  <div data-tab-content="following">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px">
+      <a href="profile.html?u=ali" class="friend-chip"><div class="friend-avatar av-1">AK</div><span class="friend-name">ali.dev</span></a>
+      <a href="profile.html?u=elif" class="friend-chip"><div class="friend-avatar av-2">ES</div><span class="friend-name">elif_s</span></a>
+      <a href="profile.html?u=mert" class="friend-chip"><div class="friend-avatar av-3">MB</div><span class="friend-name">mert_b</span></a>
+      <a href="profile.html?u=selin" class="friend-chip"><div class="friend-avatar av-4">SK</div><span class="friend-name">selin.k</span></a>
+      <a href="profile.html?u=can" class="friend-chip"><div class="friend-avatar av-2">CY</div><span class="friend-name">can.yilmaz</span></a>
+      <a href="profile.html?u=tk" class="friend-chip"><div class="friend-avatar av-1">TK</div><span class="friend-name">tuna.k</span></a>
+      <a href="profile.html?u=za" class="friend-chip"><div class="friend-avatar av-3">ZA</div><span class="friend-name">zeynep.a</span></a>
+      <a href="profile.html?u=rk" class="friend-chip"><div class="friend-avatar av-4">RK</div><span class="friend-name">rüya.k</span></a>
+      <a href="profile.html?u=nk" class="friend-chip"><div class="friend-avatar av-2">NK</div><span class="friend-name">nil.k</span></a>
+      <a href="profile.html?u=ek" class="friend-chip"><div class="friend-avatar av-1">EK</div><span class="friend-name">ece.k</span></a>
+    </div>
+  </div>
+  <div data-tab-content="followers" style="display:none">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px">
+      <a href="profile.html?u=ali" class="friend-chip"><div class="friend-avatar av-1">AK</div><span class="friend-name">ali.dev</span></a>
+      <a href="profile.html?u=selin" class="friend-chip"><div class="friend-avatar av-4">SK</div><span class="friend-name">selin.k</span></a>
+      <a href="profile.html?u=elif" class="friend-chip"><div class="friend-avatar av-2">ES</div><span class="friend-name">elif_s</span></a>
+      <a href="profile.html?u=mert" class="friend-chip"><div class="friend-avatar av-3">MB</div><span class="friend-name">mert_b</span></a>
+      <a href="profile.html?u=can" class="friend-chip"><div class="friend-avatar av-2">CY</div><span class="friend-name">can.yilmaz</span></a>
+    </div>
+  </div>
+  <div data-tab-content="suggested" style="display:none">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px">
+      <a href="profile.html?u=xyz" class="friend-chip"><div class="friend-avatar av-3">OB</div><span class="friend-name">ozan.b</span></a>
+      <a href="profile.html?u=xyz2" class="friend-chip"><div class="friend-avatar av-4">DA</div><span class="friend-name">deniz.a</span></a>
+      <a href="profile.html?u=xyz3" class="friend-chip"><div class="friend-avatar av-1">YT</div><span class="friend-name">yusuf.t</span></a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

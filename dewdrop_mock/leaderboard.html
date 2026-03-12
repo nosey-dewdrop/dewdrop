@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · leaderboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html" class="on">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">leaderboard</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Who's making <em style="font-style:italic;color:var(--accent)">waves?</em></h1>
+  </div>
+
+  <div class="tabs" style="margin-bottom:28px">
+    <button class="tab on" data-tab="weekly">This Week</button>
+    <button class="tab" data-tab="monthly">This Month</button>
+    <button class="tab" data-tab="alltime">All Time</button>
+  </div>
+
+  <div data-tab-content="weekly">
+    <div class="lb-list">
+      <a href="profile.html?u=selin" class="lb-row"><span class="lb-rank gold">1</span><div class="lb-avatar av-1">SK</div><div class="lb-info"><div class="lb-name">selin.k</div><div class="lb-tier-text">Wave Maker</div></div><div class="lb-xp">1,840</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:100%"></div></div></a>
+      <a href="profile.html?u=ali" class="lb-row"><span class="lb-rank silver">2</span><div class="lb-avatar av-2">AK</div><div class="lb-info"><div class="lb-name">ali.dev</div><div class="lb-tier-text">Storm Chaser</div></div><div class="lb-xp">980</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:72%"></div></div></a>
+      <a href="profile.html" class="lb-row" style="background:var(--accent-dim)"><span class="lb-rank bronze">3</span><div class="lb-avatar av-3">DS</div><div class="lb-info"><div class="lb-name">damla <span style="font-size:.62rem;color:var(--accent)">(you)</span></div><div class="lb-tier-text">Storm Chaser</div></div><div class="lb-xp">720</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:52%"></div></div></a>
+      <a href="profile.html?u=mert" class="lb-row"><span class="lb-rank">4</span><div class="lb-avatar av-4">MO</div><div class="lb-info"><div class="lb-name">mert.oz</div><div class="lb-tier-text">Tide Rider</div></div><div class="lb-xp">310</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:26%"></div></div></a>
+      <a href="profile.html?u=elif" class="lb-row"><span class="lb-rank">5</span><div class="lb-avatar av-2">ES</div><div class="lb-info"><div class="lb-name">elif_s</div><div class="lb-tier-text">Tide Rider</div></div><div class="lb-xp">280</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:22%"></div></div></a>
+      <a href="profile.html?u=can" class="lb-row"><span class="lb-rank">6</span><div class="lb-avatar av-1">CY</div><div class="lb-info"><div class="lb-name">can.yilmaz</div><div class="lb-tier-text">Tide Rider</div></div><div class="lb-xp">195</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:15%"></div></div></a>
+      <a href="profile.html?u=tk" class="lb-row"><span class="lb-rank">7</span><div class="lb-avatar av-3">TK</div><div class="lb-info"><div class="lb-name">tuna.k</div><div class="lb-tier-text">Newcomer</div></div><div class="lb-xp">85</div><div class="lb-bar-wrap"><div class="lb-bar" style="width:7%"></div></div></a>
+    </div>
+  </div>
+  <div data-tab-content="monthly" style="display:none"><p style="text-align:center;color:var(--tx3);padding:40px">Monthly leaderboard data coming soon.</p></div>
+  <div data-tab-content="alltime" style="display:none"><p style="text-align:center;color:var(--tx3);padding:40px">All-time leaderboard data coming soon.</p></div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

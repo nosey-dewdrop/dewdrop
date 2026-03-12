@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · calendar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html" class="on">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">calendar</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Your <em style="font-style:italic;color:var(--accent)">schedule.</em></h1>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+    <button class="btn-outline" style="padding:8px 16px;font-size:.82rem">← Prev</button>
+    <h2 style="font-family:var(--serif);font-size:1.3rem">March 2026</h2>
+    <button class="btn-outline" style="padding:8px 16px;font-size:.82rem">Next →</button>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-header">Mon</div><div class="cal-header">Tue</div><div class="cal-header">Wed</div><div class="cal-header">Thu</div><div class="cal-header">Fri</div><div class="cal-header">Sat</div><div class="cal-header">Sun</div>
+    <div class="cal-day other-month">23</div><div class="cal-day other-month">24</div><div class="cal-day other-month">25</div><div class="cal-day other-month">26</div><div class="cal-day other-month">27</div><div class="cal-day other-month">28</div><div class="cal-day">1</div>
+    <div class="cal-day">2</div><div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div><a href="event.html?id=jazz" class="cal-day has-event" style="color:inherit">8</a>
+    <div class="cal-day">9</div><div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day today">12</div><div class="cal-day">13</div><div class="cal-day">14</div><a href="event.html?id=jazz" class="cal-day has-event" style="color:inherit">15</a>
+    <a href="event.html?id=bball" class="cal-day has-event" style="color:inherit">16</a><a href="event.html?id=art" class="cal-day has-event" style="color:inherit">17</a><a href="event.html?id=food" class="cal-day has-event" style="color:inherit">18</a><a href="event.html?id=study" class="cal-day has-event" style="color:inherit">19</a><a href="event.html?id=tech" class="cal-day has-event" style="color:inherit">20</a><div class="cal-day">21</div><div class="cal-day">22</div>
+    <div class="cal-day">23</div><div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div>
+    <div class="cal-day">30</div><div class="cal-day">31</div><div class="cal-day other-month">1</div><div class="cal-day other-month">2</div><div class="cal-day other-month">3</div><div class="cal-day other-month">4</div><div class="cal-day other-month">5</div>
+  </div>
+
+  <div class="section-header"><h2 class="section-title"><span class="section-num">📅</span> This week</h2></div>
+  <div class="activity-list">
+    <a href="event.html?id=jazz" class="activity-row" style="color:inherit"><div class="activity-icon">🎵</div><div class="activity-text"><div class="activity-main"><strong>Rooftop Jazz Night</strong></div><div class="activity-time">Saturday Mar 15 · 8 PM · Çankaya</div></div></a>
+    <a href="event.html?id=bball" class="activity-row" style="color:inherit"><div class="activity-icon">🏀</div><div class="activity-text"><div class="activity-main"><strong>3v3 Basketball Tournament</strong></div><div class="activity-time">Sunday Mar 16 · 10 AM · Gençlik Parkı</div></div></a>
+    <a href="event.html?id=food" class="activity-row" style="color:inherit"><div class="activity-icon">🍕</div><div class="activity-text"><div class="activity-main"><strong>Street Food Festival</strong></div><div class="activity-time">Tuesday Mar 18 · 12 PM · Kızılay</div></div></a>
+    <a href="event.html?id=study" class="activity-row" style="color:inherit"><div class="activity-icon">📚</div><div class="activity-text"><div class="activity-main"><strong>CS201 Study Group</strong></div><div class="activity-time">Wednesday Mar 19 · 3 PM · Bilkent Library</div></div></a>
+    <a href="event.html?id=tech" class="activity-row" style="color:inherit"><div class="activity-icon">💻</div><div class="activity-text"><div class="activity-main"><strong>AI & Design Workshop</strong></div><div class="activity-time">Thursday Mar 20 · 2 PM · Bilkent EE</div></div></a>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

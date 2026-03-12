@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · @damla</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+<!-- ════ NAVBAR ════ -->
+<header class="topnav">
+  <a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a>
+  <nav class="nav-links">
+    <a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a>
+  </nav>
+  <div class="nav-right">
+    <div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div>
+    <button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button>
+    <a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a>
+    <a href="create.html" class="nav-create">✦ Create</a>
+    <a href="profile.html" class="nav-avatar">DS</a>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Profile header -->
+  <div class="profile-header" style="animation:fadeUp .4s ease both">
+    <div class="profile-avatar">
+      D
+      <span class="profile-tier-badge">☆ STORM CHASER</span>
+    </div>
+    <div class="profile-info">
+      <div class="profile-name">Damla</div>
+      <div class="profile-handle">@damla</div>
+      <div class="profile-bio">CS student at Bilkent. IEEE PR Coordinator. Building things that matter. Into music, philosophy, and debugging broken code.</div>
+      <div class="profile-stats">
+        <div><div class="stat-number">12</div><div class="stat-label">Events</div></div>
+        <div><div class="stat-number">48</div><div class="stat-label">Attended</div></div>
+        <div><div class="stat-number">156</div><div class="stat-label">Followers</div></div>
+        <div><div class="stat-number">89</div><div class="stat-label">Following</div></div>
+      </div>
+    </div>
+    <div class="profile-actions">
+      <button class="btn-follow following">Following</button>
+      <a href="messages.html" class="btn-msg">💬 Message</a>
+    </div>
+  </div>
+
+  <!-- Interests -->
+  <div class="tags-row" style="animation:fadeUp .4s ease both;animation-delay:.06s">
+    <span class="tag">🎵 Music</span><span class="tag">💻 Tech</span><span class="tag">📚 Study</span>
+    <span class="tag">🎨 Arts</span><span class="tag">🍕 Food</span><span class="tag">🧠 Philosophy</span>
+  </div>
+
+  <!-- XP card -->
+  <div class="xp-strip" style="animation:fadeUp .4s ease both;animation-delay:.1s">
+    <div class="xp-left">
+      <span class="xp-tier">✦ Storm Chaser</span>
+      <span class="xp-pts">720 / 1,200 XP</span>
+    </div>
+    <div class="xp-track-wrap">
+      <div class="xp-track"><div class="xp-fill" style="width:60%"></div></div>
+      <div class="xp-next">480 XP to <strong>Wave Maker</strong></div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs" style="animation:fadeUp .4s ease both;animation-delay:.14s">
+    <button class="tab on" data-tab="events">Events Created</button>
+    <button class="tab" data-tab="attending">Attending</button>
+    <button class="tab" data-tab="activity">Activity</button>
+  </div>
+
+  <!-- Tab: Events -->
+  <div data-tab-content="events">
+    <div class="section-header"><h2 class="section-title"><span class="section-num">01</span> Created by Damla</h2></div>
+    <div class="card-grid">
+      <a href="event.html?id=tech" class="event-card">
+        <div class="card-poster poster-tech">💻<span class="card-badge">Tech</span><span class="card-ai-badge">✨ AI Poster</span></div>
+        <div class="card-body">
+          <div class="card-date">Thu Mar 20 · 2 PM</div><div class="card-title">AI & Design Workshop</div>
+          <div class="card-location">📍 Bilkent, EE Building</div>
+          <div class="card-footer">
+            <div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-3">TK</div><div class="stack-avatar av-1">ZY</div><div class="stack-avatar av-2">+21</div></div><span class="stack-count">23 going</span></div>
+            <button class="btn-rsvp going">Going ✓</button>
+          </div>
+        </div>
+      </a>
+      <a href="event.html?id=study" class="event-card">
+        <div class="card-poster poster-study">📚<span class="card-badge">Study</span></div>
+        <div class="card-body">
+          <div class="card-date">Wed Mar 19 · 3 PM</div><div class="card-title">CS201 Study Group</div>
+          <div class="card-location">📍 Bilkent Library</div>
+          <div class="card-footer">
+            <div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-1">DS</div><div class="stack-avatar av-2">NK</div></div><span class="stack-count">4 going</span></div>
+            <button class="btn-rsvp going">Going ✓</button>
+          </div>
+        </div>
+      </a>
+      <a href="event.html?id=indie" class="event-card">
+        <div class="card-poster poster-music">🎵<span class="card-badge">Music</span><span class="card-ai-badge">✨ AI Poster</span></div>
+        <div class="card-body">
+          <div class="card-date">Sat Mar 8 · 8 PM</div><div class="card-title">Indie Night @ Çankaya</div>
+          <div class="card-location">📍 Nefes Bar, Çankaya</div>
+          <div class="card-footer">
+            <div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-2">AK</div><div class="stack-avatar av-3">ES</div></div><span class="stack-count">8 went</span></div>
+            <span style="font-size:.72rem;color:var(--tx3);font-weight:500">Past event</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tab: Attending -->
+  <div data-tab-content="attending" style="display:none">
+    <div class="section-header"><h2 class="section-title"><span class="section-num">01</span> Going to</h2></div>
+    <div class="card-grid">
+      <a href="event.html?id=food" class="event-card">
+        <div class="card-poster poster-food">🍕<span class="card-badge">Food</span></div>
+        <div class="card-body">
+          <div class="card-date">Tue Mar 18 · 12 PM</div><div class="card-title">Street Food Festival</div>
+          <div class="card-location">📍 Ankara, Kızılay</div>
+          <div class="card-footer">
+            <div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-1">DS</div><div class="stack-avatar av-3">EK</div></div><span class="stack-count">8 going</span></div>
+            <button class="btn-rsvp going">Going ✓</button>
+          </div>
+        </div>
+      </a>
+      <a href="event.html?id=bball" class="event-card">
+        <div class="card-poster poster-sports">🏀<span class="card-badge">Sports</span></div>
+        <div class="card-body">
+          <div class="card-date">Sun Mar 16 · 10 AM</div><div class="card-title">3v3 Basketball Tournament</div>
+          <div class="card-location">📍 Gençlik Parkı Courts</div>
+          <div class="card-footer">
+            <div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-3">TK</div><div class="stack-avatar av-1">+12</div></div><span class="stack-count">13 going</span></div>
+            <button class="btn-rsvp going">Going ✓</button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tab: Activity -->
+  <div data-tab-content="activity" style="display:none">
+    <div class="section-header"><h2 class="section-title"><span class="section-num">01</span> Recent activity</h2></div>
+    <div class="activity-list">
+      <div class="activity-row"><div class="activity-icon">✦</div><div class="activity-text"><div class="activity-main">Created <strong>AI & Design Workshop</strong></div><div class="activity-time">2 hours ago</div></div><span class="activity-xp">+50 XP</span></div>
+      <div class="activity-row"><div class="activity-icon">✓</div><div class="activity-text"><div class="activity-main">RSVP'd to <strong>Street Food Festival</strong></div><div class="activity-time">Yesterday</div></div><span class="activity-xp">+20 XP</span></div>
+      <div class="activity-row"><div class="activity-icon">💬</div><div class="activity-text"><div class="activity-main">Commented on <strong>3v3 Basketball Tournament</strong></div><div class="activity-time">2 days ago</div></div><span class="activity-xp">+10 XP</span></div>
+      <div class="activity-row"><div class="activity-icon">👥</div><div class="activity-text"><div class="activity-main">Started following <strong>ali.dev</strong></div><div class="activity-time">3 days ago</div></div></div>
+      <div class="activity-row"><div class="activity-icon">🏆</div><div class="activity-text"><div class="activity-main">Attended <strong>Indie Night @ Çankaya</strong></div><div class="activity-time">4 days ago</div></div><span class="activity-xp">+30 XP</span></div>
+      <div class="activity-row"><div class="activity-icon">⭐</div><div class="activity-text"><div class="activity-main">Reached <strong>Storm Chaser</strong> tier!</div><div class="activity-time">1 week ago</div></div><span class="activity-xp activity-milestone">Milestone</span></div>
+    </div>
+  </div>
+
+  <!-- Mutual friends -->
+  <div class="section-header"><h2 class="section-title"><span class="section-num">02</span> Mutual friends</h2></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px">
+    <a href="profile.html?u=ali" class="friend-chip"><div class="friend-avatar av-1">AK</div><span class="friend-name">ali.dev</span></a>
+    <a href="profile.html?u=elif" class="friend-chip"><div class="friend-avatar av-2">ES</div><span class="friend-name">elif_s</span></a>
+    <a href="profile.html?u=mert" class="friend-chip"><div class="friend-avatar av-3">MB</div><span class="friend-name">mert_b</span></a>
+    <a href="profile.html?u=selin" class="friend-chip"><div class="friend-avatar av-4">SK</div><span class="friend-name">selin.k</span></a>
+    <a href="profile.html?u=can" class="friend-chip"><div class="friend-avatar av-2">CY</div><span class="friend-name">can.yilmaz</span></a>
+  </div>
+
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body>
+</html>

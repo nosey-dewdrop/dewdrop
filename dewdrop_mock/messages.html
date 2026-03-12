@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · messages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:24px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">messages</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(28px,4vw,40px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Direct <em style="font-style:italic;color:var(--accent)">messages.</em></h1>
+  </div>
+
+  <div class="msg-layout" style="animation:fadeUp .4s ease both;animation-delay:.08s">
+    <!-- Sidebar -->
+    <div class="msg-sidebar">
+      <div class="msg-item on">
+        <div class="msg-item-avatar av-1">AK</div>
+        <div class="msg-preview"><div class="msg-name">ali.dev</div><div class="msg-last">Jazz Night'a geliyor musun?</div></div>
+        <div class="msg-unread"></div>
+      </div>
+      <a href="profile.html?u=elif" class="msg-item" style="color:inherit">
+        <div class="msg-item-avatar av-2">ES</div>
+        <div class="msg-preview"><div class="msg-name">elif_s</div><div class="msg-last">Study group'a geldim, sen?</div></div>
+      </a>
+      <a href="profile.html?u=mert" class="msg-item" style="color:inherit">
+        <div class="msg-item-avatar av-3">MB</div>
+        <div class="msg-preview"><div class="msg-name">mert_b</div><div class="msg-last">Workshop sunumunu gördüm 👏</div></div>
+      </a>
+      <a href="profile.html?u=selin" class="msg-item" style="color:inherit">
+        <div class="msg-item-avatar av-4">SK</div>
+        <div class="msg-preview"><div class="msg-name">selin.k</div><div class="msg-last">XP'de geçtim seni haha</div></div>
+      </a>
+    </div>
+
+    <!-- Chat -->
+    <div class="msg-chat">
+      <div class="msg-chat-header">
+        <a href="profile.html?u=ali" style="color:var(--tx);font-weight:600">ali.dev</a>
+        <span style="font-size:.72rem;color:var(--tx3);margin-left:8px">Storm Chaser · 980 XP</span>
+      </div>
+      <div class="msg-messages">
+        <div class="bubble received">Selam! Jazz Night'a geliyor musun cumartesi?</div>
+        <div class="bubble sent">Evet geliyorum! RSVP yaptım bile 🎵</div>
+        <div class="bubble received">Harika! Ben de birkaç kişiyi topladım, Çankaya'dan birlikte gideriz</div>
+        <div class="bubble sent">Süper, kaçta buluşalım?</div>
+        <div class="bubble received">7'ye 15 kala orada olalım, iyi yer kapalım</div>
+        <div class="bubble sent">Tamam, görüşürüz! 🤙</div>
+      </div>
+      <div class="msg-input-bar">
+        <input type="text" placeholder="Type a message…">
+        <button class="btn-primary" style="padding:10px 20px;border-radius:var(--rpill)">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

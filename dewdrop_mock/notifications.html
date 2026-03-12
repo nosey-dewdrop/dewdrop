@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">notifications</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">What's <em style="font-style:italic;color:var(--accent)">new.</em></h1>
+  </div>
+
+  <div style="max-width:640px;margin:0 auto">
+    <a href="profile.html?u=tk" class="notif-row unread" style="color:inherit">
+      <div class="notif-icon" style="background:var(--accent-dim)">👥</div>
+      <div class="notif-text"><div class="notif-main"><strong>tuna.k</strong> started following you</div><div class="notif-time">5 minutes ago</div></div>
+    </a>
+    <a href="event.html?id=jazz" class="notif-row unread" style="color:inherit">
+      <div class="notif-icon" style="background:var(--accent-dim)">💬</div>
+      <div class="notif-text"><div class="notif-main"><strong>ali.dev</strong> commented on <strong>Rooftop Jazz Night</strong></div><div class="notif-time">2 hours ago</div></div>
+    </a>
+    <a href="event.html?id=tech" class="notif-row unread" style="color:inherit">
+      <div class="notif-icon" style="background:var(--accent-dim)">✓</div>
+      <div class="notif-text"><div class="notif-main"><strong>mert_b</strong> RSVP'd to your event <strong>AI & Design Workshop</strong></div><div class="notif-time">4 hours ago</div></div>
+    </a>
+    <a href="event.html?id=food" class="notif-row" style="color:inherit">
+      <div class="notif-icon" style="background:var(--t0)">📅</div>
+      <div class="notif-text"><div class="notif-main">Reminder: <strong>Street Food Festival</strong> is tomorrow!</div><div class="notif-time">Yesterday</div></div>
+    </a>
+    <a href="profile.html?u=elif" class="notif-row" style="color:inherit">
+      <div class="notif-icon" style="background:var(--t0)">👥</div>
+      <div class="notif-text"><div class="notif-main"><strong>elif_s</strong> started following you</div><div class="notif-time">2 days ago</div></div>
+    </a>
+    <div class="notif-row" style="color:inherit">
+      <div class="notif-icon" style="background:var(--t0)">⭐</div>
+      <div class="notif-text"><div class="notif-main">You reached <strong>Storm Chaser</strong> tier! Keep going!</div><div class="notif-time">1 week ago</div></div>
+    </div>
+    <a href="event.html?id=indie" class="notif-row" style="color:inherit">
+      <div class="notif-icon" style="background:var(--t0)">🏆</div>
+      <div class="notif-text"><div class="notif-main">You attended <strong>Indie Night @ Çankaya</strong> — +30 XP!</div><div class="notif-time">1 week ago</div></div>
+    </a>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>

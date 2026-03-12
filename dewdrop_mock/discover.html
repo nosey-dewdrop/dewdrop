@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dewdrop · discover</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+<header class="topnav"><a href="index.html" class="nav-brand"><div class="nav-brand-icon">💧</div><span class="nav-brand-text">dewdrop<em>.</em></span></a><nav class="nav-links"><a href="index.html">Feed</a><a href="discover.html" class="on">Discover</a><a href="calendar.html">Calendar</a><a href="friends.html">Friends</a><a href="leaderboard.html">Leaderboard</a></nav><div class="nav-right"><div class="nav-search"><span class="nav-search-icon">⌕</span><input type="text" placeholder="Search events…"></div><button class="nav-theme" id="theme-btn" onclick="toggleTheme()">🌙 Dark</button><a href="notifications.html" class="nav-btn">🔔<span class="nav-dot"></span></a><a href="create.html" class="nav-create">✦ Create</a><a href="profile.html" class="nav-avatar">DS</a></div></header>
+
+<div class="page">
+  <div style="text-align:center;margin-bottom:36px;animation:fadeUp .4s ease both">
+    <div class="hero-eyebrow">discover</div>
+    <h1 style="font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px">Find your next <em style="font-style:italic;color:var(--accent)">thing.</em></h1>
+    <p style="font-size:.92rem;color:var(--tx2)">All events near you, filtered by what you love.</p>
+  </div>
+
+  <div class="pills">
+    <button class="pill on">🎵 All</button><button class="pill">🎶 Music</button><button class="pill">🏃 Sports</button><button class="pill">📚 Study</button><button class="pill">🎨 Arts</button><button class="pill">🍕 Food</button><button class="pill">💻 Tech</button><button class="pill">🌿 Outdoor</button>
+  </div>
+
+  <div class="section-header"><h2 class="section-title"><span class="section-num">01</span> All events near you</h2></div>
+  <div class="card-grid">
+    <a href="event.html?id=jazz" class="event-card"><div class="card-poster poster-music">🎵<span class="card-badge">Music</span><span class="card-ai-badge">✨ AI</span></div><div class="card-body"><div class="card-date">Sat Mar 15 · 8 PM</div><div class="card-title">Rooftop Jazz Night</div><div class="card-location">📍 Ankara, Çankaya</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-1">AK</div><div class="stack-avatar av-2">+10</div></div><span class="stack-count">12 going</span></div><button class="btn-rsvp">RSVP</button></div></div></a>
+
+    <a href="event.html?id=food" class="event-card"><div class="card-poster poster-food">🍕<span class="card-badge">Food</span></div><div class="card-body"><div class="card-date">Tue Mar 18 · 12 PM</div><div class="card-title">Street Food Festival</div><div class="card-location">📍 Ankara, Kızılay</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-2">MB</div><div class="stack-avatar av-1">CY</div></div><span class="stack-count">8 going</span></div><button class="btn-rsvp going">Going ✓</button></div></div></a>
+
+    <a href="event.html?id=tech" class="event-card"><div class="card-poster poster-tech">💻<span class="card-badge">Tech</span><span class="card-ai-badge">✨ AI</span></div><div class="card-body"><div class="card-date">Thu Mar 20 · 2 PM</div><div class="card-title">AI & Design Workshop</div><div class="card-location">📍 Bilkent, EE Building</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-3">TK</div><div class="stack-avatar av-2">+21</div></div><span class="stack-count">23 going</span></div><button class="btn-rsvp">RSVP</button></div></div></a>
+
+    <a href="event.html?id=bball" class="event-card"><div class="card-poster poster-sports">🏀<span class="card-badge">Sports</span></div><div class="card-body"><div class="card-date">Sun Mar 16 · 10 AM</div><div class="card-title">3v3 Basketball Tournament</div><div class="card-location">📍 Gençlik Parkı</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-3">TK</div><div class="stack-avatar av-1">+4</div></div><span class="stack-count">5 going</span></div><button class="btn-rsvp">RSVP</button></div></div></a>
+
+    <a href="event.html?id=art" class="event-card"><div class="card-poster poster-arts">🎨<span class="card-badge">Arts</span></div><div class="card-body"><div class="card-date">Mon Mar 17 · 6:30 PM</div><div class="card-title">Watercolor & Wine Evening</div><div class="card-location">📍 Tunalı Hilmi Cad.</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-2">RK</div><div class="stack-avatar av-3">ZA</div></div><span class="stack-count">18 going</span></div><button class="btn-rsvp">RSVP</button></div></div></a>
+
+    <a href="event.html?id=study" class="event-card"><div class="card-poster poster-study">📚<span class="card-badge">Study</span></div><div class="card-body"><div class="card-date">Wed Mar 19 · 3 PM</div><div class="card-title">CS201 Study Group</div><div class="card-location">📍 Bilkent Library</div><div class="card-footer"><div style="display:flex;align-items:center"><div class="avatar-stack"><div class="stack-avatar av-1">DS</div><div class="stack-avatar av-2">NK</div></div><span class="stack-count">4 going</span></div><button class="btn-rsvp going">Going ✓</button></div></div></a>
+  </div>
+</div>
+
+<footer class="footer"><div class="footer-mark">💧</div><p class="footer-text">dewdrop · built by damla · 2025</p></footer>
+<script src="js/interactions.js"></script>
+</body></html>
